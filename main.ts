@@ -2,7 +2,10 @@ namespace SpriteKind {
     export const active = SpriteKind.create()
     export const wall = SpriteKind.create()
 }
-let screen2: Sprite = null
+sprites.onOverlap(SpriteKind.Player, SpriteKind.wall, function (sprite, otherSprite) {
+    mySprite.setPosition(75, 95)
+})
+let mySprite: Sprite = null
 let Button_A = sprites.create(img`
     44444444444444444444444444444444
     44444444444444444444444444444444
@@ -75,7 +78,7 @@ let Button_D = sprites.create(img`
     44444444444444444444444444444444
     44444444444444444444444444444444
     `, SpriteKind.active)
-let mySprite = sprites.create(img`
+mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . 2 2 2 . . . . 2 2 2 . . . 
     . . 2 2 2 2 2 . . 2 2 2 2 2 . . 
@@ -97,6 +100,7 @@ let statusbar = statusbars.create(20, 4, StatusBarKind.Health)
 statusbar.attachToSprite(mySprite, 0, 0)
 statusbar.setStatusBarFlag(StatusBarFlag.SmoothTransition, false)
 statusbar.setColor(5, 2, 10)
+mySprite.setStayInScreen(true)
 let Mettaton = sprites.create(img`
     ................................................................
     ................................................................
@@ -465,6 +469,9 @@ let box = sprites.create(img`
     ............................................................................................................................................................................................................................................................................................................
     ............................................................................................................................................................................................................................................................................................................
     `, SpriteKind.wall)
+mySprite.setKind(SpriteKind.Player)
+box.setKind(SpriteKind.wall)
+mySprite.setBounceOnWall(true)
 controller.moveSprite(mySprite)
 mySprite.setPosition(75, 96)
 Button_A.setPosition(33, 84)
@@ -472,5 +479,6 @@ Button_B.setPosition(126, 84)
 Button_C.setPosition(33, 110)
 Button_D.setPosition(126, 110)
 box.setPosition(75, 81)
-Mettaton.setPosition(44, 34)
-screen2.setPosition(110, 27)
+Mettaton.setPosition(28, 34)
+pause(100)
+story.printText(":)", 0, 0)
