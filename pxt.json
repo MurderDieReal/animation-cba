@@ -2,7 +2,9 @@
     "name": "animation cba",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "pxt-status-bar": "github:jwunderl/pxt-status-bar#v0.4.2",
+        "arcade-story": "github:microsoft/arcade-storytelling#v1.0.3"
     },
     "files": [
         "main.blocks",
@@ -12,7 +14,8 @@
         "images.g.jres",
         "images.g.ts",
         "tilemap.g.jres",
-        "tilemap.g.ts"
+        "tilemap.g.ts",
+        "main.py"
     ],
     "testFiles": [
         "test.ts"
@@ -21,7 +24,7 @@
         "branch": "v1.12.46",
         "tag": "v1.12.46",
         "commits": "https://github.com/microsoft/pxt-arcade/commits/e66fb08db35df2249cd64300195259c64d497106",
-        "target": "1.12.46",
+        "target": "1.12.47",
         "pxt": "8.5.57",
         "targetId": "arcade"
     },
