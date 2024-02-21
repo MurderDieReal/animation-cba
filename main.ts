@@ -1,12 +1,302 @@
 namespace SpriteKind {
-    export const active = SpriteKind.create()
+    export const activeA = SpriteKind.create()
     export const wall = SpriteKind.create()
+    export const activeB = SpriteKind.create()
+    export const ActiveC = SpriteKind.create()
+    export const ActiveD = SpriteKind.create()
+    export const th9ing = SpriteKind.create()
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.activeB, function (sprite, otherSprite) {
+    if (true) {
+        Button_B.setImage(assets.image`myImage1`)
+    }
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.ActiveD, function (sprite, otherSprite) {
+    if (true) {
+        Button_D.setImage(assets.image`myImage3`)
+    }
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.th9ing, function (sprite, otherSprite) {
+    Button_A.setImage(img`
+        44444444444444444444444444444444
+        44444444444444444444444444444444
+        44ffffffffffff444fffffffffffff44
+        44fffffffffff44444ffffffffffff44
+        44ffffffffff444444ffffffffffff44
+        44ffffffffff444f44ffffffffffff44
+        44ffffffffff44ff444fffffffffff44
+        44fffffffff44fff444fffffffffff44
+        44fffffffff44ff44444ffffffffff44
+        44ffffffff4444444444ffffffffff44
+        44ffffffff44444444444fffffffff44
+        44fffffff444444fff444fffffffff44
+        44fffffff444ffffff4444ffffffff44
+        44fffffff44fffffffff44ffffffff44
+        44444444444444444444444444444444
+        44444444444444444444444444444444
+        `)
+    Button_B.setImage(img`
+        44444444444444444444444444444444
+        44444444444444444444444444444444
+        44ffffffff44444444ffffffffffff44
+        44fffffffff444ff444fffffffffff44
+        44fffffffff444fff444ffffffffff44
+        44fffffffff444fff4444fffffffff44
+        44ffffffffff444f4444ffffffffff44
+        44ffffffffff44444444ffffffffff44
+        44ffffffffff4444444fffffffffff44
+        44ffffffffff44fff444ffffffffff44
+        44ffffffffff44ffff444fffffffff44
+        44fffffffff444ffff444fffffffff44
+        44fffffffff4444fff44ffffffffff44
+        44fffffff4444444444fffffffffff44
+        44444444444444444444444444444444
+        44444444444444444444444444444444
+        `)
+    Button_C.setImage(img`
+        44444444444444444444444444444444
+        44444444444444444444444444444444
+        44ffffffffff44444444ffffffffff44
+        44fffffffff44444444fffffffffff44
+        44ffffffff44444fffffffffffffff44
+        44fffffff44444ffffffffffffffff44
+        44fffffff4444fffffffffffffffff44
+        44fffffff444ffffffffffffffffff44
+        44fffffff444ffffffffffffffffff44
+        44fffffff444ffffffffffffffffff44
+        44fffffff4444fffffffffffffffff44
+        44fffffff4444444ffffffffffffff44
+        44ffffffff44444444444fffffffff44
+        44fffffffff4444444444fffffffff44
+        44444444444444444444444444444444
+        44444444444444444444444444444444
+        `)
+    Button_D.setImage(img`
+        44444444444444444444444444444444
+        44444444444444444444444444444444
+        44ffffffffff444444ffffffffffff44
+        44ffffffffff44444444ffffffffff44
+        44fffffffffff4444f444fffffffff44
+        44fffffffffff444fff44fffffffff44
+        44fffffffffff444ffff44ffffffff44
+        44fffffffffff444ffff444fffffff44
+        44fffffffffff444ffff444fffffff44
+        44fffffffffff444ffff444fffffff44
+        44ffffffffff4444ffff444fffffff44
+        44ffffffffff44444444444fffffff44
+        44ffffffffff4444444444ffffffff44
+        44fffffffff444444444ffffffffff44
+        44444444444444444444444444444444
+        44444444444444444444444444444444
+        `)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.activeA, function (sprite, otherSprite) {
+    if (true) {
+        Button_A.setImage(assets.image`myImage0`)
+    }
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.wall, function (sprite, otherSprite) {
-    mySprite.setPosition(75, 95)
+    mySprite.y += 2.5
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.ActiveC, function (sprite, otherSprite) {
+    if (true) {
+        Button_C.setImage(assets.image`myImage4`)
+    }
 })
 let mySprite: Sprite = null
-let Button_A = sprites.create(img`
+let Button_D: Sprite = null
+let Button_C: Sprite = null
+let Button_B: Sprite = null
+let Button_A: Sprite = null
+scene.setBackgroundImage(img`
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    `)
+let th9ing = sprites.create(img`
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffff
+    `, SpriteKind.th9ing)
+let th9ing_2 = sprites.create(img`
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    `, SpriteKind.th9ing)
+th9ing.setPosition(76, 96)
+th9ing_2.setPosition(75, 92)
+Button_A = sprites.create(img`
     44444444444444444444444444444444
     44444444444444444444444444444444
     44ffffffffffff444fffffffffffff44
@@ -23,8 +313,8 @@ let Button_A = sprites.create(img`
     44fffffff44fffffffff44ffffffff44
     44444444444444444444444444444444
     44444444444444444444444444444444
-    `, SpriteKind.active)
-let Button_B = sprites.create(img`
+    `, SpriteKind.activeA)
+Button_B = sprites.create(img`
     44444444444444444444444444444444
     44444444444444444444444444444444
     44ffffffff44444444ffffffffffff44
@@ -41,8 +331,8 @@ let Button_B = sprites.create(img`
     44fffffff4444444444fffffffffff44
     44444444444444444444444444444444
     44444444444444444444444444444444
-    `, SpriteKind.active)
-let Button_C = sprites.create(img`
+    `, SpriteKind.activeB)
+Button_C = sprites.create(img`
     44444444444444444444444444444444
     44444444444444444444444444444444
     44ffffffffff44444444ffffffffff44
@@ -59,8 +349,8 @@ let Button_C = sprites.create(img`
     44fffffffff4444444444fffffffff44
     44444444444444444444444444444444
     44444444444444444444444444444444
-    `, SpriteKind.active)
-let Button_D = sprites.create(img`
+    `, SpriteKind.ActiveC)
+Button_D = sprites.create(img`
     44444444444444444444444444444444
     44444444444444444444444444444444
     44ffffffffff444444ffffffffffff44
@@ -77,24 +367,20 @@ let Button_D = sprites.create(img`
     44fffffffff444444444ffffffffff44
     44444444444444444444444444444444
     44444444444444444444444444444444
-    `, SpriteKind.active)
+    `, SpriteKind.ActiveD)
 mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . 2 2 2 . . . . 2 2 2 . . . 
-    . . 2 2 2 2 2 . . 2 2 2 2 2 . . 
-    . 2 2 2 2 2 2 . . 2 2 2 2 2 2 . 
-    . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . 
-    . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . 
-    . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . 
-    . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . 
-    . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 . 
-    . . 2 2 2 2 2 2 2 2 2 2 2 2 . . 
-    . . 2 2 2 2 2 2 2 2 2 2 2 2 . . 
-    . . . . 2 2 2 2 2 2 2 2 . . . . 
-    . . . . 2 2 2 2 2 2 2 2 . . . . 
-    . . . . . . 2 2 2 2 . . . . . . 
-    . . . . . . 2 2 2 2 . . . . . . 
-    . . . . . . . 2 2 . . . . . . . 
+    . . . . . . . . . . . . 
+    . . 2 2 . . . . 2 2 . . 
+    . 2 2 2 2 . . 2 2 2 2 . 
+    . 2 2 2 2 2 2 2 2 2 2 . 
+    . 2 2 2 2 2 2 2 2 2 2 . 
+    . 2 2 2 2 2 2 2 2 2 2 . 
+    . 2 2 2 2 2 2 2 2 2 2 . 
+    . . 2 2 2 2 2 2 2 2 . . 
+    . . . 2 2 2 2 2 2 . . . 
+    . . . . 2 2 2 2 . . . . 
+    . . . . . 2 2 . . . . . 
+    . . . . . . . . . . . . 
     `, SpriteKind.Player)
 let statusbar = statusbars.create(20, 4, StatusBarKind.Health)
 statusbar.attachToSprite(mySprite, 0, 0)
@@ -481,4 +767,51 @@ Button_D.setPosition(126, 110)
 box.setPosition(75, 81)
 Mettaton.setPosition(28, 34)
 pause(100)
-story.printText(":)", 0, 0)
+forever(function () {
+	
+})
+forever(function () {
+    if (controller.A.isPressed()) {
+        if (mySprite.overlapsWith(Button_A)) {
+            story.printText("are you sure?", 100, 15)
+            pauseUntil(() => true)
+            if (controller.A.isPressed() || mySprite.overlapsWith(th9ing)) {
+                if (true) {
+                	
+                } else {
+                	
+                }
+            }
+        }
+        if (mySprite.overlapsWith(Button_B)) {
+            story.printText("are you sure?", 100, 15)
+            if (controller.A.isPressed()) {
+                if (true) {
+                	
+                } else {
+                	
+                }
+            }
+        }
+        if (mySprite.overlapsWith(Button_C)) {
+            story.printText("are you sure?", 100, 15)
+            if (controller.A.isPressed()) {
+                if (true) {
+                	
+                } else {
+                	
+                }
+            }
+        }
+        if (mySprite.overlapsWith(Button_D)) {
+            story.printText("are you sure?", 100, 15)
+            if (controller.A.isPressed()) {
+                if (true) {
+                	
+                } else {
+                	
+                }
+            }
+        }
+    }
+})
