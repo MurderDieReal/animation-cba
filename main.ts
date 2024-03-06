@@ -283,19 +283,75 @@ let th9ing = sprites.create(img`
     ffffffffffffffffffffffffffffffffffffffff
     `, SpriteKind.th9ing)
 let th9ing_2 = sprites.create(img`
-    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    `, SpriteKind.th9ing)
+let t9ing_3 = sprites.create(img`
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    `, SpriteKind.th9ing)
+let t9ing_4 = sprites.create(img`
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
+    ffffffffffffffffffff
     `, SpriteKind.th9ing)
 th9ing.setPosition(76, 96)
-th9ing_2.setPosition(75, 92)
+th9ing_2.setPosition(75, 99)
+t9ing_3.setPosition(10, 96)
+t9ing_4.setPosition(155, 96)
 Button_A = sprites.create(img`
     44444444444444444444444444444444
     44444444444444444444444444444444
@@ -384,7 +440,7 @@ mySprite = sprites.create(img`
     `, SpriteKind.Player)
 let statusbar = statusbars.create(20, 4, StatusBarKind.Health)
 statusbar.attachToSprite(mySprite, 0, 0)
-statusbar.setStatusBarFlag(StatusBarFlag.SmoothTransition, false)
+statusbar.setStatusBarFlag(StatusBarFlag.SmoothTransition, true)
 statusbar.setColor(5, 2, 10)
 mySprite.setStayInScreen(false)
 let Mettaton = sprites.create(img`
@@ -761,26 +817,37 @@ mySprite.setBounceOnWall(true)
 scene.cameraFollowSprite(mySprite)
 controller.moveSprite(mySprite)
 mySprite.setPosition(75, 96)
-Button_A.setPosition(0, 84)
-Button_B.setPosition(126, 84)
-Button_C.setPosition(42, 84)
-Button_D.setPosition(126, 110)
+Button_A.setPosition(-20, 84)
+Button_B.setPosition(42, 84)
+Button_C.setPosition(126, 84)
+Button_D.setPosition(180, 84)
 box.setPosition(75, 81)
 Mettaton.setPosition(28, 34)
-pause(100)
 forever(function () {
 	
 })
 forever(function () {
     if (controller.A.isPressed()) {
         if (mySprite.overlapsWith(Button_A)) {
-            if (controller.A.isPressed()) {
+            scene.cameraFollowSprite(Mettaton)
+            story.spriteSayText(Mettaton, "well, well, well.")
+            story.spriteSayText(Mettaton, "what do we got here?")
+            story.spriteSayText(Mettaton, ".      .      .")
+            story.spriteSayText(Mettaton, "just kidding, anyway")
+            story.spriteSayText(Mettaton, "here's your question")
+            story.spriteSayText(Mettaton, "smear frames are used to make an animation:")
+            story.showPlayerChoices("rough", "smooth")
+            pauseUntil(() => true)
+            if (true) {
             	
             } else {
             	
             }
+            pause(500)
+            scene.cameraFollowSprite(mySprite)
         }
         if (mySprite.overlapsWith(Button_B)) {
+            story.printText("are you sure?", 100, 15)
             if (controller.A.isPressed()) {
                 pauseUntil(() => true)
                 if (true) {
