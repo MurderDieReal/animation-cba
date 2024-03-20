@@ -5,6 +5,7 @@ namespace SpriteKind {
     export const ActiveC = SpriteKind.create()
     export const ActiveD = SpriteKind.create()
     export const th9ing = SpriteKind.create()
+    export const no = SpriteKind.create()
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.activeB, function (sprite, otherSprite) {
     if (true) {
@@ -103,6 +104,10 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.ActiveC, function (sprite, other
         Button_C.setImage(assets.image`myImage4`)
     }
 })
+let q2 = false
+let q1 = false
+let list = 0
+let Button_A_no: Sprite = null
 let mySprite: Sprite = null
 let Button_D: Sprite = null
 let Button_C: Sprite = null
@@ -830,6 +835,7 @@ forever(function () {
     if (controller.A.isPressed()) {
         if (mySprite.overlapsWith(Button_A)) {
             scene.cameraFollowSprite(Mettaton)
+            controller.moveSprite(mySprite, 0, 0)
             story.spriteSayText(Mettaton, "well, well, well.")
             story.spriteSayText(Mettaton, "what do we got here?")
             story.spriteSayText(Mettaton, ".      .      .")
@@ -838,13 +844,54 @@ forever(function () {
             story.spriteSayText(Mettaton, "smear frames are used to make an animation:")
             story.showPlayerChoices("rough", "smooth")
             pauseUntil(() => true)
-            if (true) {
-            	
+            if (story.checkLastAnswer("smooth")) {
+                info.changeScoreBy(1)
+                story.spriteSayText(Mettaton, "Correct!!!")
+                pause(200)
             } else {
-            	
+                info.changeScoreBy(0)
+                story.spriteSayText(Mettaton, "Wrong, sorry...(no i'm not)")
+                pause(200)
             }
+            Button_A_no = sprites.create(img`
+                eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+                eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+                eeffffffffffffeeefffffffffffffee
+                eefffffffffffeeeeeffffffffffffee
+                eeffffffffffeeeeeeffffffffffffee
+                eeffffffffffeeefeeffffffffffffee
+                eeffffffffffeeffeeefffffffffffee
+                eefffffffffeefffeeefffffffffffee
+                eefffffffffeeffeeeeeffffffffffee
+                eeffffffffeeeeeeeeeeffffffffffee
+                eeffffffffeeeeeeeeeeefffffffffee
+                eefffffffeeeeeefffeeefffffffffee
+                eefffffffeeeffffffeeeeffffffffee
+                eefffffffeefffffffffeeffffffffee
+                eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+                eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+                `, SpriteKind.no)
+            Button_A_no.setPosition(-20, 84)
             pause(500)
             scene.cameraFollowSprite(mySprite)
+            controller.moveSprite(mySprite, 100, 100)
+            if (controller.A.isPressed()) {
+                if (mySprite.overlapsWith(Button_A_no)) {
+                    scene.cameraFollowSprite(Mettaton)
+                    controller.moveSprite(mySprite, 0, 0)
+                    story.spriteSayText(Mettaton, "You already answered that one. Letting you do it again would be cheating...")
+                    pause(200)
+                    story.spriteSayText(Mettaton, "Wanna know what I do to cheaters...")
+                    pause(200)
+                    story.spriteSayText(Mettaton, ". . .")
+                    pause(500)
+                    story.spriteSayText(Mettaton, "I")
+                    pause(500)
+                    story.spriteSayText(Mettaton, "I-i've never had a cheater before. lets not find out what happens.")
+                    pause(200)
+                    controller.moveSprite(mySprite, 100, 100)
+                }
+            }
         }
         if (mySprite.overlapsWith(Button_B)) {
             story.printText("are you sure?", 100, 15)
@@ -878,4 +925,11 @@ forever(function () {
             }
         }
     }
+})
+forever(function () {
+    let index = 0
+    let questons = 0
+    list = questons
+    q1 = index == questons
+    q2 = index == questons
 })
